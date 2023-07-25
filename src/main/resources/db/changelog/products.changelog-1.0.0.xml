@@ -1,0 +1,44 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+
+    <!-- Table: products -->
+    <changeSet id="createProductsTable" author="Kelian">
+        <createTable tableName="products">
+            <column name="id" type="INT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="code" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="description" type="VARCHAR(1000)">
+                <constraints nullable="false" />
+            </column>
+            <column name="price" type="FLOAT">
+                <constraints nullable="false" />
+            </column>
+            <column name="quantity" type="INT">
+                <constraints nullable="false" />
+            </column>
+            <column name="inventoryStatus" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="category" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="image" type="VARCHAR(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rating" type="INT">
+                <constraints nullable="true" />
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
